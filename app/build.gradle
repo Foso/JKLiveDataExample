@@ -1,0 +1,59 @@
+apply plugin: 'com.android.application'
+apply from: 'constants.gradle'
+
+android {
+  compileSdkVersion compileSdk
+  defaultConfig {
+    applicationId applicationId
+    minSdkVersion minSdk
+    targetSdkVersion targetSdk
+    versionCode versionCode
+    versionName versionName
+
+    testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+    }
+  }
+}
+
+
+
+dependencies {
+  implementation fileTree(dir: 'libs', include: ['*.jar'])
+  implementation "com.android.support:appcompat-v7:${supportLibVersion}"
+  implementation "com.android.support.constraint:constraint-layout:${constraintLayout}"
+  testCompile "junit:junit:${junitVersion}"
+  androidTestImplementation "com.android.support.test:runner:${testRunner}"
+  androidTestImplementation "com.android.support.test.espresso:espresso-core:${espressoCore}"
+
+  // ViewModel and LiveData
+  implementation "android.arch.lifecycle:extensions:${architectureVersion}"
+  annotationProcessor "android.arch.lifecycle:compiler:${architectureVersion}"
+
+
+  // Test helpers for LiveData
+  testImplementation "android.arch.core:core-testing:${architectureVersion}"
+
+  // Test helpers for Room
+  testImplementation "android.arch.persistence.room:testing:${architectureVersion}"
+
+  //LiveData Rx
+  compile "android.arch.lifecycle:reactivestreams:${architectureVersion}"
+
+  implementation "com.jakewharton:butterknife:${butterknifeVersion}"
+  annotationProcessor "com.jakewharton:butterknife-compiler:${butterknifeVersion}"
+
+  compile "io.reactivex.rxjava2:rxjava:${rxJavaVersion}"
+  // Because RxAndroid releases are few and far between, it is recommended you also
+  // explicitly depend on RxJava's latest version for bug fixes and new features.
+  compile "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}"
+}

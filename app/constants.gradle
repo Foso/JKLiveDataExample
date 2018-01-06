@@ -1,0 +1,20 @@
+project.ext {
+
+  applicationId = "de.jensklingenberg.jklivedata"
+  compileSdk = 27
+  targetSdk = 27
+  minSdk = 21
+  versionCode = 1
+  versionName = "1.0"
+  buildTools = '27.0.1'
+  junitVersion = '4.12'
+  appVersion = '1.0'
+  butterknifeVersion = '8.8.1'
+  supportLibVersion = '27.0.2'
+  architectureVersion = '1.0.0'
+  rxJavaVersion = '2.1.7'
+  rxAndroidVersion = '2.0.1'
+  constraintLayout = '1.0.2'
+  testRunner = '1.0.1'
+  espressoCore = '3.0.1'
+}

@@ -1,0 +1,5 @@
+@startuml
+MainActivity -> JKViewModel: increment()
+JKViewModel --> MainActivity: getCount()
+JKViewModel --> MainActivity: getCountAsString()
+@enduml
