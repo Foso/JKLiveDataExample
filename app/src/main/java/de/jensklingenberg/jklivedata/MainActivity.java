@@ -70,16 +70,15 @@ public class MainActivity extends AppCompatActivity {
     LiveDataReactiveStreams.toPublisher(this, mModel.getCount())
         .subscribe(new DisposableSubscriber<Integer>() {
           @Override public void onNext(Integer integer) {
-            // Log.i("MainActivity", "onNext: " + String.valueOf(integer));
             rxJava.setText("LiveData to RxJava: " + String.valueOf(integer));
           }
 
           @Override public void onError(Throwable t) {
-            Log.i("MainActivity", "onNext: ");
+            Log.i("MainActivity", "onError: ");
           }
 
           @Override public void onComplete() {
-            Log.i("MainActivity", "onNext: ");
+            Log.i("MainActivity", "onComplete: ");
           }
         });
   }

@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/JKLiveDataExample.iml" filepath="$PROJECT_DIR$/.idea/JKLiveDataExample.iml" />
       <module fileurl="file://$PROJECT_DIR$/JKLiveDataExample.iml" filepath="$PROJECT_DIR$/JKLiveDataExample.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
